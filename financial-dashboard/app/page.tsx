@@ -1,4 +1,6 @@
-import Dashboard from "@/components/Dashboard"
+"use client"
+
+import Dashboard from "../components/Dashboard"
 
 export default function Home() {
   return (
@@ -8,4 +10,3 @@ export default function Home() {
     </main>
   )
 }
-
