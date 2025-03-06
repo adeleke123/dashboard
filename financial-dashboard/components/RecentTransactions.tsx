@@ -1,6 +1,7 @@
 "use client"
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { formatDistanceToNow } from "date-fns"
 
 const transactions = [
   { id: 1, description: "Grocery Shopping", amount: -85.5, date: "2023-07-01" },
@@ -15,22 +16,25 @@ export function RecentTransactions() {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>Description</TableHead>
-          <TableHead>Amount</TableHead>
-          <TableHead>Date</TableHead>
+          <TableHead className="font-medium">Description</TableHead>
+          <TableHead className="font-medium">Amount</TableHead>
+          <TableHead className="font-medium">Date</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {transactions.map((transaction) => (
           <TableRow key={transaction.id}>
-            <TableCell>{transaction.description}</TableCell>
-            <TableCell className={transaction.amount > 0 ? "text-green-600" : "text-red-600"}>
-              ${Math.abs(transaction.amount).toFixed(2)}
+            <TableCell className="font-medium">{transaction.description}</TableCell>
+            <TableCell className={`currency ${transaction.amount > 0 ? "positive-amount" : "negative-amount"}`}>
+              {transaction.amount > 0 ? "+" : ""}${Math.abs(transaction.amount).toFixed(2)}
             </TableCell>
-            <TableCell>{transaction.date}</TableCell>
+            <TableCell className="text-muted-foreground">
+              {formatDistanceToNow(new Date(transaction.date), { addSuffix: true })}
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
     </Table>
   )
 }
+
