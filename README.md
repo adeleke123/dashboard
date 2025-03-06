@@ -35,8 +35,8 @@ Follow these steps to get the project running on your local machine:
 ### 1. Clone the repository
 
 ```shellscript
-git clone https://github.com/your-username/finance-tracker.git
-cd finance-tracker
+git clone https://github.com/your-username/dashboard.git
+cd dashboard
 ```
 
 ### 2. Install dependencies
