@@ -1,4 +1,4 @@
-Thought for 2 seconds### Finance Tracker Dashboard
+### Finance Tracker Dashboard
 
 A modern, interactive financial dashboard built with Next.js and Tailwind CSS. This application helps users track their finances with an intuitive interface, comprehensive onboarding flow, and personalized experience.
 
