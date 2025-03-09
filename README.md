@@ -181,7 +181,7 @@ In a production environment, these would be stored in a database.
 Feel free to reach out if you have any questions or encounter any issues!
 
 
-
+```
 
 onboarding-flow-project/
 ├── app/
@@ -215,3 +215,4 @@ onboarding-flow-project/
 ├── package.json                   # Dependencies and scripts
 └── README.md                      # Project documentation
 
+```
