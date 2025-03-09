@@ -183,7 +183,7 @@ Feel free to reach out if you have any questions or encounter any issues!
 
 ```
 
-onboarding-flow-project/
+project-structure/
 ├── app/
 │   ├── layout.tsx                 # Root layout file for the app
 │   ├── page.tsx                   # Main onboarding page component
